@@ -4,7 +4,7 @@
 
         <div class="row align-items-center min-vh-100">
 
-            <div class="col-lg-6">
+            <div class="col-lg-6" style="z-index: 10">
 
                 <span class="badge-acr">
 
@@ -30,15 +30,17 @@
 
                 <p class="hero-text">
 
-                    Desarrollo soluciones web modernas,
-                    plataformas empresariales y experiencias digitales
-                    enfocadas en rendimiento, usabilidad y diseño visual.
+                    Desarrollo plataformas empresariales,
+sistemas web y experiencias digitales
+que ayudan a las empresas a optimizar
+procesos, incrementar productividad
+y mejorar su presencia digital.
 
                 </p>
 
                 <div class="d-flex gap-3 mt-4">
 
-                                    <a href="#" class="btn-acr btn-acr-primary">
+                    <a href="#" class="btn-acr btn-acr-primary">
 
                         <i class="fa-solid fa-code"></i>
 
@@ -46,7 +48,8 @@
 
                     </a>
 
-                                <a href="{{ asset('asset/Documentos/cv-Agustin-Constantino-Rugerio -2026.pdf') }}" target="blank" class="btn-acr btn-acr-outline">
+                    <a href="{{ asset('asset/Documentos/cv-Agustin-Constantino-Rugerio -2026.pdf') }}" target="blank"
+                        class="btn-acr btn-acr-outline">
 
                         <i class="fa-solid fa-download"></i>
 
@@ -55,49 +58,96 @@
                     </a>
 
                 </div>
-               <div class="hero-social mt-4">
+                <div class="hero-social mt-4">
 
-    <a href="#">
-        <i class="fa-brands fa-github"></i>
-    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
 
-    <a href="#">
-        <i class="fa-brands fa-linkedin"></i>
-    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
 
-    <a href="mailto:aconstantino@codebyacr.com">
-        <i class="fa-regular fa-envelope"></i>
-    </a>
+                    <a href="mailto:aconstantino@codebyacr.com">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
 
-</div>
+                </div>
 
             </div>
 
             <div class="col-lg-6 text-center">
-<div class="hero-photo-container">
 
-    <div class="hero-bg"></div>
+                {{-- <div class="hero-bg"></div> --}}
+                <div class="hero-photo-container">
 
-    <img src="{{ asset('asset/images/agustin.png') }}"
-         class="hero-photo"
-         alt="Agustín Constantino">
-<div class="hero-bg">
-    <div class="orbit orbit-1"></div>
-    <div class="orbit orbit-2"></div>
+                                      <img src="{{ asset('asset/images/codebyacr-1-a.png') }}" class="hero-photo" alt="Agustín Constantino">
 
-    <span class="particle p1"></span>
-    <span class="particle p2"></span>
-    <span class="particle p3"></span>
-    <span class="particle p4"></span>
-</div>
-</div>
-                {{-- <img src="{{ asset('assets/img/agustin.png') }}"
-                     class="hero-photo img-fluid"> --}}
+
+                    <!-- CARD 1 -->
+                    <div class="hero-card card-laravel">
+
+                        <div class="card-icon laravel">
+                            <i class="fa-brands fa-laravel"></i>
+                        </div>
+
+                        <div>
+                            <h5>Laravel</h5>
+                            <span>Laravel Expert</span>
+                        </div>
+
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="hero-card card-figma">
+
+                        <div class="card-icon figma">
+                            <i class="fa-brands fa-figma"></i>
+                        </div>
+
+                        <div>
+                            <h5>Figma</h5>
+                            <span>UI/UX Design</span>
+                        </div>
+
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="hero-card card-wordpress">
+
+                        <div class="card-icon wordpress">
+                            <i class="fa-brands fa-wordpress"></i>
+                        </div>
+
+                        <div>
+                            <h5>WordPress</h5>
+                            <span>E-commerce & SEO</span>
+                        </div>
+
+                    </div>
+                    <div class="hero-card card-fullstack">
+
+                        <div class="card-icon fullstack">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <div>
+                            <h5>Full Stack</h5>
+                            <span>Laravel · PHP · JS</span>
+                        </div>
+
+                    </div>
+                    {{-- <img src="{{ asset('asset/images/codebyacr-1.png') }}" class="hero-photo" alt="Agustín Constantino"> --}}
+                    <span class="particle p1"></span>
+                    <span class="particle p2"></span>
+                    <span class="particle p3"></span>
+                    <span class="particle p4"></span>
+
+
+                </div>
 
             </div>
 
         </div>
-
-    </div>
 
 </section>

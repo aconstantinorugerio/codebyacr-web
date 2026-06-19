@@ -741,7 +741,7 @@
                                     </p>
 
                                     <small>
-                                        Wordpress • Elementor 
+                                        Wordpress • Elementor  
                                     </small>
 
                                 </div>
@@ -876,9 +876,9 @@
 
                     <!-- CTA -->
 
-                    <div class="cta-box mt-1" id="contactame">
+                    <div class="cta-box mt-4" id="contactame">
 
-                        <div class="row align-items-center">
+                        <div class="row align-items-center ">
 
                             <div class="col-lg-7 col-md-12">
 

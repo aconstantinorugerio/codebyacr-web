@@ -82,7 +82,7 @@
 
                     <div class="col-lg-3 text-center">
 
-                        <img src="{{ asset('asset/images/agus-contacto.png') }}" class="contact-photo" alt="Agustín">
+                        <img src="{{ asset('asset/images/codebyacr.png') }}" class="contact-photo" alt="Agustín">
 
                         <h5 class="mt-3">
                             Agustín Constantino
