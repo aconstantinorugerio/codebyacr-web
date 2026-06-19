@@ -82,6 +82,7 @@ y mejorar su presencia digital.
                 <div class="hero-photo-container">
 
                                       <img src="{{ asset('asset/images/codebyacr-1-a.png') }}" class="hero-photo" alt="Agustín Constantino">
+                                      <img src="{{ asset('asset/images/proyectos/rubenfernadezlimacommx1.jpg') }}"
 
 
                     <!-- CARD 1 -->
