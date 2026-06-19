@@ -81,8 +81,8 @@ y mejorar su presencia digital.
                 {{-- <div class="hero-bg"></div> --}}
                 <div class="hero-photo-container">
 
-                                      <img src="{{ asset('asset/images/diacon.jpg') }}" class="hero-photo" alt="Agustín Constantino">
-                                      <img src="{{ asset('asset/images/proyectos/diacon.jpg') }}">
+                                      {{-- <img src="{{ asset('asset/images/diacon.jpg') }}" class="hero-photo" alt="Agustín Constantino"> --}}
+                                      <img src="{{ asset('asset/images/proyectos/codebyacr1.png') }}" class="hero-photo" alt="Agustín Constantino">
 
 
                     <!-- CARD 1 -->
