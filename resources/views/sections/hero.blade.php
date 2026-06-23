@@ -14,7 +14,7 @@
                 <h1 class="hero-title">
 
                     Agustín Constantino
-                    <span>Rugerio</span>
+                    <span>Rugerio 1</span>
 
                 </h1>
 
