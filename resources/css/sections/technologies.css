@@ -1,0 +1,152 @@
+/* technologies styles */
+
+.section-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #fff3eb;
+    color: #ff6b00;
+    border-radius: 40px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.title-line {
+    width: 50px;
+    height: 4px;
+    background: #2563eb;
+    margin: 15px auto 0;
+    border-radius: 20px;
+}
+
+.tech-card span {
+    display: block;
+    font-weight: 600;
+    color: #414247;
+    font-size: 15px;
+}
+
+.tech-section {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.tech-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+    transition: .35s;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 35px rgba(0,0,0,.05);
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,.12);
+}
+
+.tech-card img {
+    margin-bottom: 15px;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    transition: .35s;
+}
+
+.tech-card:hover img {
+    transform: scale(1.12) rotate(5deg);
+}
+
+.tech-card h5 {
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.tech-card small {
+    color: #888;
+}
+
+.tech-level {
+    margin-top: 18px;
+    background: #ececec;
+    height: 8px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.tech-progress {
+    height: 100%;
+    background: linear-gradient(90deg,#ff6b00,#ff9b55);
+    border-radius: 20px;
+}
+
+.tech-progress--laravel {
+    width: 95%;
+}
+
+.tech-progress--php {
+    width: 95%;
+}
+
+.tech-progress--javascript {
+    width: 70%;
+}
+
+.tech-progress--bootstrap {
+    width: 92%;
+}
+
+.tech-progress--mysql {
+    width: 90%;
+}
+
+.tech-progress--wordpress {
+    width: 95%;
+}
+
+.tech-progress--figma {
+    width: 88%;
+}
+
+.tech-progress--git {
+    width: 90%;
+}
+
+.tech-progress--shopify {
+    width: 80%;
+}
+
+.tech-progress--whm {
+    width: 92%;
+}
+
+.tech-progress--cpanel {
+    width: 92%;
+}
+
+@media(max-width:768px) {
+    .tech-section {
+        padding: 70px 0;
+    }
+
+    .tech-card {
+        padding: 22px 18px;
+    }
+
+    .tech-card img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .tech-card h5 {
+        font-size: 1rem;
+    }
+}

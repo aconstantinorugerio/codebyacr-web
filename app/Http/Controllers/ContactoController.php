@@ -2,47 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-// Modelos 
-use App\Models\Contacto;
-// emails 
-use App\Mail\ContactoClienteMail;
+use App\Http\Requests\StoreContactoRequest;
 use App\Mail\ContactoAdminMail;
+use App\Mail\ContactoClienteMail;
+use App\Models\Contacto;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Mail;
 
 class ContactoController extends Controller
 {
-     public function store(Request $request)
-    { 
-        
-    
-        $request->validate([
-            'nombre' => 'required|max:255',
-            'correo' => 'required|email',
-            'mensaje' => 'required|min:1'
-        ]);
+    public function store(StoreContactoRequest $request): JsonResponse
+    {
+        $datos = array_merge(
+            ['telefono' => null, 'empresa' => null],
+            $request->validated(),
+        );
 
-        $contacto = Contacto::create([
-            'nombre' => $request->nombre,
-            'correo' => $request->correo,
-            'telefono' => $request->telefono,
-            'empresa' => $request->empresa,
-            'mensaje' => $request->mensaje,
-        ]);
-// Envio de correos 
-$datos = $request->all();
+        $contacto = Contacto::create($datos);
 
-Mail::to($request->correo)
-    ->send(new ContactoClienteMail($datos));
+        Mail::to($datos['correo'])
+            ->send(new ContactoClienteMail($datos));
 
-Mail::to('contacto@codebyacr.com')
-    ->send(new ContactoAdminMail($datos));
-
+        Mail::to(config('contact.admin_email'))
+            ->send(new ContactoAdminMail($datos));
 
         return response()->json([
             'success' => true,
-            'message' => 'Mensaje enviado correctamente. Pronto me pondre en contacto contigo',
-            'id' => $contacto->id
+            'message' => 'Mensaje enviado correctamente. Pronto me pondré en contacto contigo.',
+            'id' => $contacto->id,
         ]);
     }
 }

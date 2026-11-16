@@ -1,0 +1,64 @@
+/* cta styles */
+
+.cta-section {
+    background: #f8fafc;
+}
+
+.cta-box {
+    background: linear-gradient(
+        135deg,
+        #062e70,
+        #0950bb
+    );
+    border-radius: 20px 20px 0px 0px;
+    padding: 45px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cta-box::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.05);
+    right: -80px;
+    top: -80px;
+}
+
+.cta-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.cta-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0d6efd;
+    font-size: 2rem;
+}
+
+.cta-content h3 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.cta-content p {
+    color: rgba(255,255,255,.9);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+}

@@ -1,0 +1,147 @@
+/* experience styles */
+
+.timeline-date {
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 50px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #2563eb;
+    border-radius: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -42px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #2563eb;
+    z-index: 2;
+}
+
+.timeline-marker-in {
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--secondary);
+    border: 3px solid var(--secondary);
+    z-index: 2;
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.timeline-content h5 {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.timeline-content p {
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+.timeline-logo {
+    width: 180px;
+    min-width: 180px;
+}
+
+.timeline-logo img {
+    width: 100%;
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.05);
+    transition: .3s;
+}
+
+.timeline-logo img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(37,99,235,.15);
+}
+
+@media(max-width:991px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-logo {
+        width: 100%;
+    }
+
+    .timeline-logo img {
+        max-width: 220px;
+    }
+}
+
+@media (max-width:991px) {
+    .timeline {
+        padding-left: 18px;
+    }
+
+    .timeline::before {
+        left: 18px;
+    }
+
+    .timeline-item {
+        padding-left: 45px;
+    }
+
+    .timeline-marker {
+        left: -6px;
+    }
+
+    .timeline-logo {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin-top: 18px;
+        text-align: left;
+    }
+
+    .timeline-logo img {
+        width: 90%;
+    }
+}
+
+@media(max-width:991px) {
+    .timeline-content h5 {
+        font-size: 1.15rem;
+    }
+
+    .timeline-content p {
+        font-size: .95rem;
+    }
+
+    .timeline-date {
+        font-size: .85rem;
+    }
+}

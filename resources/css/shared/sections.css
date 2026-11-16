@@ -1,0 +1,22 @@
+/* sections styles */
+
+.heading-line {
+    width: 30px;
+    height: 4px;
+    background: #2563eb;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.about-experience {
+    background: #fff;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+@media(max-width:768px) {
+    .about-experience {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}

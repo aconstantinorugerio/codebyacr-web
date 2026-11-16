@@ -1,0 +1,14 @@
+/* Shared text styles */
+
+.section-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: auto;
+    color: #777;
+    margin-top: 15px;
+}

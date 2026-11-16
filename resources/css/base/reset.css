@@ -1,0 +1,33 @@
+/* reset styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff;
+    color: var(--dark);
+}
+
+html {
+    scroll-behavior: smooth;
+}

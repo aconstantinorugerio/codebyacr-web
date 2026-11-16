@@ -1,81 +1,146 @@
+// =======================================
+// CARRUSEL INFINITO DE PROYECTOS
+// =======================================
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const track = document.querySelector('.projects-track');
-    const cards = document.querySelectorAll('.project-card');
     const nextBtn = document.getElementById('nextProject');
     const prevBtn = document.getElementById('prevProject');
 
-    if (!track || cards.length === 0) return;
+    if (!track || !nextBtn || !prevBtn || track.dataset.carouselInitialized) return;
 
-    const visibleCards = 3;
-    let currentIndex = 0;
+    const originalCards = Array.from(track.querySelectorAll('.project-card'));
+    const totalCards = originalCards.length;
 
-    const cardWidth = cards[0].offsetWidth + 25;
+    if (totalCards < 2) return;
+
+    track.dataset.carouselInitialized = 'true';
+
+    const cloneCard = card => {
+        const clone = card.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        return clone;
+    };
+
+    // Clonar todas las tarjetas al inicio
+    const beforeClones = document.createDocumentFragment();
+
+    originalCards.forEach(card => {
+        beforeClones.appendChild(cloneCard(card));
+    });
+
+    track.prepend(beforeClones);
+
+    // Clonar todas las tarjetas al final
+    const afterClones = document.createDocumentFragment();
+
+    originalCards.forEach(card => {
+        afterClones.appendChild(cloneCard(card));
+    });
+
+    track.appendChild(afterClones);
+
+    const carouselCards = Array.from(track.children);
+    // Comenzar en la primera tarjeta original
+    let currentIndex = totalCards;
+    let isMoving = false;
 
     function updateSlider() {
 
-        track.style.transform =
-            `translateX(-${currentIndex * cardWidth}px)`;
+        const activeCard = carouselCards[currentIndex];
 
+        if (!activeCard) return;
+
+        track.style.transform =
+            `translateX(-${activeCard.offsetLeft}px)`;
     }
 
-    nextBtn.addEventListener('click', () => {
+    function moveNext() {
 
-        currentIndex += visibleCards;
+        if (isMoving) return;
 
-        if (currentIndex >= cards.length) {
-
-            currentIndex = 0;
-
-        }
+        isMoving = true;
+        currentIndex++;
 
         updateSlider();
+    }
 
-    });
+    function movePrev() {
 
-    prevBtn.addEventListener('click', () => {
+        if (isMoving) return;
 
-        currentIndex -= visibleCards;
-
-        if (currentIndex < 0) {
-
-            currentIndex = Math.max(0, cards.length - visibleCards);
-
-        }
+        isMoving = true;
+        currentIndex--;
 
         updateSlider();
+    }
 
+    // Detectar el final de cada transición
+    track.addEventListener('transitionend', (event) => {
+
+        if (event.target !== track || event.propertyName !== 'transform') return;
+
+        // Si llegamos a los clones del final, volver al original
+        if (currentIndex >= totalCards * 2) {
+
+            currentIndex = totalCards;
+
+            track.style.transition = 'none';
+            updateSlider();
+
+            void track.offsetHeight;
+
+            track.style.transition = '';
+        }
+
+        // Si llegamos a los clones del inicio, volver al original
+        else if (currentIndex < totalCards) {
+
+            currentIndex = totalCards * 2 - 1;
+
+            track.style.transition = 'none';
+            updateSlider();
+
+            void track.offsetHeight;
+
+            track.style.transition = '';
+        }
+
+        isMoving = false;
     });
+
+    nextBtn.addEventListener('click', moveNext);
+    prevBtn.addEventListener('click', movePrev);
+
+    // Recalcular la posición cuando cambia el tamaño de pantalla
+    window.addEventListener('resize', () => {
+
+        if (currentIndex >= totalCards * 2) {
+            currentIndex -= totalCards;
+        } else if (currentIndex < totalCards) {
+            currentIndex += totalCards;
+        }
+
+        track.style.transition = 'none';
+        updateSlider();
+
+        void track.offsetHeight;
+
+        track.style.transition = '';
+        isMoving = false;
+    });
+
+    // Posicionar inicialmente el carrusel
+    track.style.transition = 'none';
+    updateSlider();
+
+    void track.offsetHeight;
+
+    track.style.transition = '';
 
 });
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-link");
 
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.clientHeight;
-
-        if (scrollY >= sectionTop) {
-
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-
-            link.classList.add("active");
-        }
-    });
-});
 
 // Envio de correo 
 // =======================================

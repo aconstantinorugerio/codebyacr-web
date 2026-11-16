@@ -114,13 +114,15 @@
 
                                 <div class="col-md-6 mb-3">
 
-                                    <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+                                    <input type="text" class="form-control" name="nombre" placeholder="Nombre"
+                                        maxlength="255" required>
 
                                 </div>
 
                                 <div class="col-md-6 mb-3">
 
-                                    <input type="email" class="form-control" name="correo" placeholder="Correo">
+                                    <input type="email" class="form-control" name="correo" placeholder="Correo"
+                                        maxlength="255" required>
 
                                 </div>
 
@@ -130,13 +132,15 @@
 
                                 <div class="col-md-6 mb-3">
 
-                                    <input type="text" class="form-control" name="telefono" placeholder="Teléfono">
+                                    <input type="text" class="form-control" name="telefono" placeholder="Teléfono"
+                                        maxlength="255">
 
                                 </div>
 
                                 <div class="col-md-6 mb-3">
 
-                                    <input type="text" class="form-control" name="empresa" placeholder="Empresa">
+                                    <input type="text" class="form-control" name="empresa" placeholder="Empresa"
+                                        maxlength="255">
 
                                 </div>
 
@@ -144,7 +148,8 @@
 
                             <div class="mb-3">
 
-                                <textarea class="form-control" rows="5" name="mensaje" placeholder="Cuéntame sobre tu proyecto">
+                                <textarea class="form-control" rows="5" name="mensaje"
+                                    placeholder="Cuéntame sobre tu proyecto" maxlength="5000" required>
                                 </textarea>
 
                             </div>

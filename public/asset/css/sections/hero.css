@@ -1,0 +1,514 @@
+/* hero styles */
+
+.hero-imagen {
+    position: relative;
+    z-index: 10;
+    filter: drop-shadow(0 25px 40px rgba(0,0,0,.18));
+}
+
+.hero-photos {
+    position: relative;
+    z-index: 5;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,.15));
+}
+
+.hero-section {
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 0px 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 20;
+}
+
+.badge-acr {
+    background-color: var(--gray-blue);
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    background: #EEF2F7;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.hero-title span {
+    color: var(--primary);
+}
+
+.hero-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.orange-tit {
+    color: var(--secondary);
+}
+
+.hero-buttons {
+    margin-top: 35px;
+}
+
+.hero-social a {
+    width: 48px;
+    height: 48px;
+    border: solid 1px #2563EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #fff;
+    color: var(--primary);
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    transition: .35s;
+}
+
+.hero-social a:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+@media(max-width:991px) {
+    .hero-section {
+        padding: 70px 0;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        justify-content: center;
+    }
+
+    .hero-text {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-social {
+        justify-content: center;
+    }
+
+    .hero-photo-container {
+        width: 100%;
+        height: 560px;
+    }
+
+    .hero-photo {
+        width: 430px;
+    }
+
+    .card-fullstack {
+        right: 20px;
+    }
+
+    .card-laravel {
+        right: 20px;
+    }
+
+    .card-figma {
+        left: 10px;
+    }
+
+    .card-wordpress {
+        left: 30px;
+    }
+}
+
+@media(max-width:768px) {
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .hero-subtitle {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 1.5rem;
+    }
+
+    .orange-tit {
+        border: none!important;
+        padding: 0!important;
+    }
+
+    .hero-photo-container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .hero-photo {
+        position: relative;
+        transform: none;
+        left: auto;
+        width: 280px;
+    }
+
+    .hero-card {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        max-width: 320px;
+        min-width: auto;
+    }
+
+    .particle {
+        display: none;
+    }
+}
+
+.hero-text {
+    line-height: 1.8;
+    color: #556070;
+    margin-top: 20px;
+    font-size: 18px;
+    max-width: 550px;
+}
+
+.hero-social {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+}
+
+.hero-photo-container {
+    max-width: 100%;
+    position: relative;
+    width: 600px;
+    height: 520px;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.p1 {
+    top: 160px;
+    left: 140px;
+}
+
+.p2 {
+    top: 300px;
+    right: 90px;
+}
+
+.p3 {
+    bottom: 180px;
+    left: 180px;
+}
+
+.p4 {
+    bottom: 280px;
+    right: 140px;
+}
+
+.hero-photo {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 650px;
+    height: auto;
+    display: block;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    width: auto;
+    max-height: 520px;
+    object-fit: contain;
+    filter: drop-shadow(
+            0 30px 60px rgba(0,0,0,.15)
+        );
+}
+
+.hero-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 260px;
+    padding: 18px 24px;
+    border-radius: 28px;
+    background: rgba(255,255,255,.45);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,.55);
+    box-shadow: 0 20px 45px rgba(15,23,42,.08),
+        inset 0 1px 0 rgba(255,255,255,.7);
+    transition: .4s ease;
+    z-index: 20;
+}
+
+.hero-card:hover {
+    transform: translateY(-6px);
+}
+
+.hero-card h5 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.hero-card span {
+    font-size: .9rem;
+    color: #64748b;
+}
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 1.8rem;
+}
+
+.card-icon--laravel {
+    color: #ff2d20;
+    background: rgba(255,45,32,.08);
+}
+
+.card-icon--figma {
+    color: #a259ff;
+    background: rgba(162,89,255,.08);
+}
+
+.card-icon--wordpress {
+    color: #21759b;
+    background: rgba(33,117,155,.08);
+}
+
+.hero-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+    transition: 1.2s;
+}
+
+.hero-card:hover::before {
+    left: 100%;
+}
+
+.card-laravel {
+    right: -30px;
+    bottom: 110px;
+}
+
+.card-figma {
+    left: -20px;
+    top: 200px;
+}
+
+.card-wordpress {
+    left: 20px;
+    bottom: 40px;
+}
+
+.card-fullstack {
+    right: -40px;
+    top: 0px;
+}
+
+.card-icon--fullstack {
+    color: #2563EB;
+    background: rgba(37,99,235,.08);
+}
+
+.particle {
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 0 10px rgba(255,255,255,.8);
+    position: absolute;
+    border-radius: 50%;
+    background: #2563EB;
+    z-index: 1;
+    animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding: 90px 0 60px;
+    }
+
+    .hero-photo-container {
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    .hero-photo {
+        width: 340px;
+        max-width: 90%;
+        height: auto;
+    }
+
+    .hero-text {
+        margin: 25px auto;
+        max-width: 650px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-social {
+        justify-content: center;
+    }
+
+    .hero-card {
+        min-width: 220px;
+        padding: 15px 20px;
+    }
+
+    .card-fullstack {
+        right: 0;
+        top: 20px;
+    }
+
+    .card-laravel {
+        right: 0;
+        bottom: 90px;
+    }
+
+    .card-figma {
+        left: 0;
+        top: 170px;
+    }
+
+    .card-wordpress {
+        left: 20px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width:767.98px) {
+    .hero-section {
+        padding-top: 50px;
+    }
+
+    .hero-title span {
+        display: block;
+    }
+
+    .orange-tit {
+        border: none !important;
+        padding: 0 !important;
+    }
+
+    .hero-text {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-photo {
+        width: 280px;
+    }
+
+    .hero-photo-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 18px;
+    }
+
+    .hero-card {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        max-width: 320px;
+        min-width: auto;
+    }
+
+    .particle {
+        display: none;
+    }
+}
+
+@media (max-width:480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .hero-photo {
+        width: 100%;
+    }
+
+    .hero-card {
+        padding: 14px 16px;
+    }
+
+    .hero-card h5 {
+        font-size: 16px;
+    }
+
+    .hero-card span {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,112 @@
+/* buttons styles */
+
+.btn-acr {
+    height: 56px;
+    padding: 0 28px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.btn-acr-primary:hover {
+    transform: translateY(-3px);
+    background: #1d4ed8;
+    color: #fff;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, .35);
+}
+
+.btn-acr-outline {
+    background: var(--light);
+    border: 1px solid #E5E7EB;
+    color: #414247;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .04);
+}
+
+.btn-acr-outline:hover {
+    border-color: #2563EB;
+    color: #2563EB;
+    transform: translateY(-3px);
+}
+
+.btn-acr-orange {
+    background: #E77B16;
+    color: white;
+    border: none;
+    box-shadow: 0 10px 25px rgba(231,123,22,.25);
+}
+
+.btn-acr-orange:hover {
+    background: #d86f0f;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.btn-acr i {
+    font-size: 16px;
+}
+
+.navbar-acr .btn-contact-proyecto,
+.btn-projects-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .4s ease;
+    border: none;
+}
+
+.navbar-acr .btn-contact-proyecto {
+    background: #2c82ff;
+    color: #fff;
+}
+
+.navbar-acr .btn-contact-proyecto:hover {
+    background: #e7e8fa;
+    color: #2c82ff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+}
+
+.btn-projects-cta {
+    background: #E77B16;
+    color: #fff;
+}
+
+.btn-projects-cta:hover {
+    background: #ff9e44;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+}
+
+.btn-acr-primary {
+    background: #2563EB;
+    color: #fff;
+    border: none;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, .25);
+}
+
+.btn-primary-custom {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary-custom:hover {
+    background: var(--light);
+    color: var(--primary);
+    border: #c9c9cb 1px solid;
+}
+
+.btn-outline-custom {
+    border: 1px solid #ddd;
+}

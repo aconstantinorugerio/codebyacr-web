@@ -1,0 +1,15 @@
+/* variables styles */
+
+:root {
+    --primary: #2563EB;
+    --secondary: #E77B16;
+    --dark: #414247;
+    --light: #F8FAFC;
+    --gray: #64748B;
+    --gray-light: #EEF2F7;
+    --border-radius: 18px;
+    --transition: .35s ease;
+    --shadow-sm: 0 5px 15px rgba(0,0,0,.05);
+    --shadow-md: 0 10px 25px rgba(0,0,0,.08);
+    --shadow-lg: 0 20px 45px rgba(0,0,0,.12);
+}

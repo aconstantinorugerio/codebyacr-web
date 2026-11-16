@@ -1,0 +1,95 @@
+/* navbar styles */
+
+.navbar-acr .btn-contact {
+    white-space: nowrap;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    color: #fff;
+    border: var(--secondary) 1px solid;
+}
+
+.navbar-acr .btn-contact:hover {
+    background-color: #fff;
+    border-radius: 10px;
+    border: var(--secondary) 1px solid;
+    color: var(--secondary);
+}
+
+.navbar-acr .nav-link.active {
+    color: #2c82ff !important;
+    font-weight: 600;
+    position: relative;
+}
+
+.navbar-acr .nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #2c82ff;
+    border-radius: 20px;
+}
+
+.navbar-acr {
+    background: rgba(255,255,255,.90);
+    backdrop-filter: blur(12px);
+    transition: .35s;
+    padding: 12px 0;
+}
+
+.logo {
+    width: 170px;
+    transition: .3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-acr .nav-link {
+    font-weight: 500;
+    margin: 0 12px;
+    position: relative;
+    transition: .3s;
+}
+
+.navbar-acr .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transform: translateX(-50%);
+    transition: .35s;
+}
+
+.navbar-acr .nav-link:hover::after {
+    width: 100%;
+}
+
+@media (max-width:991px) {
+    .menu-acr {
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    .navbar-acr .nav-link {
+        margin: 12px 0;
+        font-size: 18px;
+    }
+
+    .navbar-acr .btn-contact {
+        display: inline-flex;
+        justify-content: center;
+        width: 220px;
+        margin: 25px auto 10px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+}
